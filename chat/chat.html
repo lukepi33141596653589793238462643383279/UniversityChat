@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Chat</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0d0f1a;
+      color: white;
+    }
+
+    #messages {
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid #333;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .msg {
+      padding: 5px;
+      border-bottom: 1px solid #222;
+    }
+
+    input {
+      width: 70%;
+      padding: 10px;
+    }
+
+    button {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>💬 University Chat</h2>
+
+  <div id="messages"></div>
+
+  <input id="messageInput" placeholder="Type a message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <script type="module" src="./chat.js"></script>
+
+</body>
+</html>
