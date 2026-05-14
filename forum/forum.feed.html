@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Forum</title>
+  <link rel="stylesheet" href="forum.styles.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h2>Communities</h2>
+      <div id="communityList"></div>
+    </aside>
+
+    <main class="feed">
+
+      <div class="create-box">
+        <a href="forum.create.html">➕ Create Post</a>
+      </div>
+
+      <div id="postFeed"></div>
+
+    </main>
+
+    <aside class="rightbar">
+      <h2>Trending</h2>
+      <div id="trending"></div>
+    </aside>
+
+  </div>
+
+  <script type="module" src="forum.feed.js"></script>
+</body>
+</html>
