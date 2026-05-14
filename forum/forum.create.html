@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Post</title>
+  <link rel="stylesheet" href="forum.styles.css">
+</head>
+<body>
+
+  <div class="create-container">
+
+    <h2>Create Post</h2>
+
+    <input id="title" placeholder="Title">
+    <textarea id="content" placeholder="Content"></textarea>
+
+    <input id="community" placeholder="Community (e.g. programming)">
+
+    <button id="submit">Post</button>
+
+  </div>
+
+  <script type="module">
+    import { ForumDB } from "./forum.db.js";
+
+    document.getElementById("submit").onclick = async () => {
+      await ForumDB.createPost({
+        title: title.value,
+        content: content.value,
+        communityId: community.value,
+        authorId: "user_demo"
+      });
+
+      alert("Post created!");
+      window.location.href = "forum.feed.html";
+    };
+  </script>
+
+</body>
+</html>
